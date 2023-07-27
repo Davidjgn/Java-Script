@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num3=6;
+        function addition(){
+            const num1= document.getElementById("num1").value;
+            const num2= document.getElementById("num2").value;
+            const result= Number(num1)+Number(num2);
+            document.write(result);
+        }
+        function subtract(){
+            const num1= document.getElementById("num1").value;
+            const num2= document.getElementById("num2").value;
+            const result= Number(num1)-Number(num2);
+            document.write(result);
+        }
+        /*
+            Number
+            a=1;
+            b=2;
+            c=3;
+
+            String
+            fname="david";
+            lname="garza";
+
+            Boolean
+            TRUE/FALSE
+
+            Object
+            {fname:"david", lname:"garza"}
+             key: value     key: value
+
+            Array
+            cars=["BMW", "PORCHE", "MERCEDES"];
+            */
+    </script>
+</head>
+<body>
+    <form>
+        <label for="">Addition/Subtraction: </label>
+        <br>
+        <label for="num1">Number 1: </label>
+        <input type="number" name="num1" id="num1">
+        <br>
+        <label for="num2">Number 2: </label>
+        <input type="number" name="num2" id="num2">
+        <br>
+        <input type="button" value="add" onclick="addition()">
+        <input type="button" value="subtract" onclick="subtract()">
+    </form>
+</body>
+</html>

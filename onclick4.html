@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function compare(){
+            const num1= document.getElementById("num1").value;
+            const num2= document.getElementById("num2").value;
+            const num3= document.getElementById("num3").value;
+
+            if((num1>num2)&&(num1>num3))
+            {
+                document.write(num1);
+                document.write(" is max");
+            }
+            else if((num2>num3)&&(num2>num1))
+            {
+                document.write(num2);
+                document.write(" is max");
+            }
+            else{
+                document.write(num3);
+                document.write(" is max");
+            }
+            let result= 0;
+            result= Math.max(num1,num2,num3);
+            document.write(result);
+        }
+    </script>
+
+</head>
+<body>
+    <form action="">
+        <label for="">Buggest Number: </label>
+        <br>
+        <label for="num1">Number 1: </label>
+        <input type="number" name="num1" id="num1">
+        <br>
+        <label for="num2">Number 2: </label>
+        <input type="number" name="num2" id="num2">
+        <br>
+        <label for="num3">Number 3: </label>
+        <input type="number" name="num3" id="num3">
+        <br>
+        <input type="button" value="submit" onclick="compare()">
+    </form>
+</body>
+</html>

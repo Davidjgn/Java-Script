@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function multiplication(){
+            const amount1= document.getElementById("amount1").value;
+            const amount2= document.getElementById("amount2").value;
+            const amount3= document.getElementById("amount3").value;
+            const price1= document.getElementById("price1").value;
+            const price2= document.getElementById("price2").value;
+            const price3= document.getElementById("price3").value;
+            const result= ((Number(amount1)*Number(price1))+((Number(amount2)*Number(price2)))+((Number(amount3)*Number(price3))));
+            document.getElementById("p1").value=result;
+            //document.write(result);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Payment</label>
+        <br>
+        <label>Item/</label>
+        <label>Amount/</label>
+        <label>Price</label>
+        <br>
+        <label>Item 1</label>
+        <input type="number" id="amount1" name="form">
+        <input type="number" id="price1" name="form">
+        <br>
+        <label>Item 2</label>
+        <input type="number" id="amount2" name="form">
+        <input type="number" id="price2" name="form">
+        <br>
+        <label>Item 3</label>
+        <input type="number" id="amount3" name="form">
+        <input type="number" id="price3" name="form">
+        <br>
+        <label>Total Price: </label>
+        <input type="button" value="submit" id="btn1" onclick="multiplication()" name="form">
+        <p>
+            Total: 
+            <input type="text" id="p1">
+        </p>
+    </form>
+</body>
+</html>
