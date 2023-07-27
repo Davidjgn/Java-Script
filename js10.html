@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunction(){
+            var num1=Number(document.getElementById("num1").value);
+            for(var i=1;i<=num1;i++){
+                for(var j=0;j<i;j++){
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Enter Number: </label>
+        <input type="number" id="num1">
+        <br>
+        <input type="button" value="submit" onclick="myfunction()">
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var fartemp;
+        function myfunction(){
+            var celtemp = document.getElementById("txt1").value;
+            console.log(celtemp);
+            fartemp = (celtemp * 1.8) +32;
+            document.write(fartemp);
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="">Celcius Temperature: </label>
+        <input type="number" id="txt1" name="txturl1">
+        <input type="button" id="btn1" value="submit" onclick="myfunction()">
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=0;
+        var b=0;
+        var c=0;
+        function myfunction(){
+            a=document.getElementById("num1").value;
+            b=document.getElementById("num2").value;
+            c=a;
+            a=b;
+            b=c;
+            document.write("Number 1 = "+a+"<br>");
+            document.write("Number 2 = "+b);
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="">Number 1</label>
+        <input type="number" id="num1">
+        <br>
+        <label for="">Number 2</label>
+        <input type="number" id="num2">
+        <br>
+        <input type="button" value="submit" onclick="myfunction()">
+    </form>
+</body>
+</html>
