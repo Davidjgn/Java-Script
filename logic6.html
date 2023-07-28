@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunction(){
+            var fname =document.getElementById("fname").value;
+            var lname =document.getElementById("lname").value;
+            var address =document.getElementById("address").value;
+            var num1 =document.getElementById("num1").value;
+            var pcode =document.getElementById("pcode").value;
+            var city =document.getElementById("city").value;
+            var country =document.getElementById("country").value;
+
+            if(fname == ''){
+                document.write("Please enter a First Name."+"<br>");
+            }
+            else{
+                document.write("First Name: "+fname+"<br>");
+            }
+            if(lname == ''){
+                document.write("Please enter a Last Name."+"<br>");
+            }
+            else{
+                document.write("Last Name: "+lname+"<br>");
+            }
+            if(address == ''){
+                document.write("Please enter an Address."+"<br>");
+            }
+            else{
+                document.write("Address: "+address+"<br>");
+            }
+            if(num1 == ''){
+                document.write("Please enter a phone Number."+"<br>");
+            }
+            else{
+                document.write("Phone Number: "+num1+"<br>");
+            }
+            if(pcode == ''){
+                document.write("Please enter a Postal Code."+"<br>");
+            }
+            else{
+                document.write("Postal Code: "+pcode+"<br>");
+            }
+            if(city == ''){
+                document.write("Please enter a City"+"<br>");
+            }
+            else{
+                document.write("City: "+city+"<br>");
+            }
+            if(country == ''){
+                document.write("Please enter a Country."+"<br>");
+            }
+            else{
+                document.write("Country: "+country+"<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Enter First Name: </label>
+        <input type="text" id="fname">
+        <br>
+        <label>Enter Last Name: </label>
+        <input type="text" id="lname">
+        <br>
+        <label>Enter Address: </label>
+        <input type="text" id="address">
+        <br>
+        <label>Phone Number: </label>
+        <input type="number" id="num1">
+        <br>
+        <label>Postal Code: </label>
+        <input type="text" id="pcode">
+        <br>
+        <label>City: </label>
+        <input type="text" id="city">
+        <br>
+        <label>Country: </label>
+        <input type="text" id="country">
+        <br>
+        <input type="button" value="submit" onclick="myfunction()">
+    </form>
+</body>
+</html>

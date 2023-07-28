@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunction(){
+            var fname= document.getElementById("num1").value;
+            //length
+            document.write(fname.length+"<br>");
+            //Slice
+            var slicestr=fname.slice(1,3);
+            document.write(slicestr+"<br>");
+            //SubString
+            var substr= fname.substring(1,3);
+            document.write(substr+"<br>");
+            //replace
+            var names = "Hi from Vancouver, good evening Vancouver";
+            var result = names.replaceAll("Vancouver", "Clagary");
+            document.write(names+"<br>");
+            document.write(result+"<br>");
+            //Uppercase
+            document.write(fname.toUpperCase()+"<br>");
+            //Lowercase
+            document.write(fname.toLowerCase()+"<br>");
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Enter Name: </label>
+        <input type="text" id="num1">
+        <br>
+        <input type="button" value="submit" onclick="myfunction()">
+    </form>
+</body>
+</html>

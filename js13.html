@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function reverse(){
+            var num1=Number(document.getElementById("num1").value);
+            var numL=document.getElementById("num1").value;
+            var length=numL.length;
+            var numR=0;
+            var numQ=num1;
+            for(var i=0;i<length;i++){
+                numR=(numQ%10)+(numR*10);
+                numQ=parseInt(numQ/10);
+            }
+            if(numR==num1){
+                document.write("Number is a Palindrome"+"<br>");
+                document.write(num1+"<br>"+numR);
+            }
+            else{
+                document.write("Number is not a Palindrome"+"<br>");
+                document.write(num1+"<br>"+numR);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Enter Palindrome: </label>
+        <input type="number" id="num1">
+        <br>
+        <input type="button" value="submit" onclick="reverse()">
+    </form>
+</body>
+</html>

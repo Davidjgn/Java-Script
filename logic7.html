@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunction(){
+            var username= document.getElementById("username").value;
+            var password= document.getElementById("password").value;
+            var slice= password.slice(password.length-4);
+            var newpass= password+slice;
+            document.write("Username is: "+username+"<br>");
+            document.write("Password is: "+newpass);
+        }
+        
+    </script>
+</head>
+<body>
+    <form>
+        <label>Enter you Username: </label>
+        <input type="text" id="username">
+        <br>
+        <label>Enter your Password: </label>
+        <input type="text" id="password">
+        <br>
+        <input type="button" id="btn" value="submit" onclick="myfunction()">
+    </form>
+</body>
+</html>

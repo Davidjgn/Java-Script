@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunction(){
+            var name=document.getElementById("num1").value;
+            var split= name.split(' ');
+            var lname= split[1];
+            document.write(split[0]+" "+lname[0]+".");
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Enter Name: </label>
+        <input type="text" id="num1">
+        <br>
+        <input type="button" value="submit" onclick="myfunction()">
+    </form>
+</body>
+</html>
