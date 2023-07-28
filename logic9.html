@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function changeSrc() {
+         var img = document.getElementById('image');
+         if (img.src == "https://i.redd.it/vscy3zg5s2g31.jpg") {
+            img.src = "https://pbs.twimg.com/media/EKM9pjTVAAIudzZ.jpg";
+         }
+         else {
+            img.src = "https://i.redd.it/vscy3zg5s2g31.jpg";
+         }
+         
+      }
+    </script>
+</head>
+<body>
+    <form>
+        <img src="https://i.redd.it/vscy3zg5s2g31.jpg" style="height: 500px; width: 500px;" alt="" id="image">
+        <input type="button" value="switch" onclick="changeSrc()">
+    </form>
+</body>
+</html>
