@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./main.css">
+    <script>
+        var num=0;
+        var Xnum=0;
+        var result=0;
+
+        var Add=0;
+        var Sub=0;
+        var Mult=0;
+        var Div=0;
+
+        function btnone(){
+            num=(num*10)+1;
+            document.getElementById("num").value=num;
+        }
+        function btntwo(){
+            num=(num*10)+2;
+            document.getElementById("num").value=num;
+        }
+        function btnthree(){
+            num=(num*10)+3;
+            document.getElementById("num").value=num;
+        }
+        function btnfour(){
+            num=(num*10)+4;
+            document.getElementById("num").value=num;
+        }
+        function btnfive(){
+            num=(num*10)+5;
+            document.getElementById("num").value=num;
+        }
+        function btnsix(){
+            num=(num*10)+6;
+            document.getElementById("num").value=num;
+        }
+        function btnseven(){
+            num=(num*10)+7;
+            document.getElementById("num").value=num;
+        }
+        function btneight(){
+            num=(num*10)+8;
+            document.getElementById("num").value=num;
+        }
+        function btnnine(){
+            num=(num*10)+9;
+            document.getElementById("num").value=num;
+        }
+        function btnzero(){
+            num=(num*10);
+            document.getElementById("num").value=num;
+        }
+
+        function btnAddition(){
+            Add=1;
+            Sub=0;
+            Mult=0;
+            Div=0;
+
+            Xnum=num;
+            num=0;
+            document.getElementById("num").value='';
+        }
+        function btnSubtraction(){
+            Add=0;
+            Sub=1;
+            Mult=0;
+            Div=0;
+            
+            Xnum=num;
+            num=0;
+            document.getElementById("num").value='';
+        }
+        function btnMultiply(){
+            Add=0;
+            Sub=0;
+            Mult=1;
+            Div=0;
+
+            Xnum=num;
+            num=0;
+            document.getElementById("num").value='';
+        }
+        function btnDivide(){
+            Add=0;
+            Sub=0;
+            Mult=0;
+            Div=1;
+
+            Xnum=num;
+            num=0;
+            document.getElementById("num").value='';
+        }
+        function btnCalculate(){
+            if(Add==1 && Sub==0){
+                result=Xnum+num;
+            }
+            else if(Sub==1 && Add==0){
+                result= Xnum - num;
+            }
+            else if(Mult==1 && Div==0){
+                result=Xnum*num;
+            }
+            else if(Div==1 && Mult==0){
+                result=Xnum/num;
+            }
+            document.getElementById("num").value=result;
+            num=result;
+        }
+        function Clear(){
+            result=0;
+            num=0;
+            Xnum=0;
+            document.getElementById("num").value='';
+        }
+
+    </script> 
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <p>Calculator</p>
+            <form>
+                <table>
+                    <input type="text" id="num">
+                    <tr>
+                        <td>
+                            <input class="btn" type="button" value="1" onclick="btnone()" id="btn1">
+                            </input>
+                        </td>
+                        <td>
+                            <input class="btn" type="button" value="2" onclick="btntwo()" id="btn2">
+                            </input>
+                        </td>
+                        <td>
+                            <input class="btn" type="button" value="3" onclick="btnthree()" id="btn3">
+                            </input>
+                        </td>
+                        <td>
+                            <input type="button" value="Clear" onclick="Clear()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="btn" type="button" value="4" onclick="btnfour()" id="btn4">
+                            </input>
+                        </td>
+                        <td>
+                            <input class="btn" type="button" value="5" onclick="btnfive()" id="btn5">
+            
+                            </input>
+                        </td>
+                        <td>
+                            <input class="btn" type="button" value="6" onclick="btnsix()" id="btn6">
+            
+                            </input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="btn" type="button" value="7" onclick="btnseven()" id="btn7">
+            
+                            </input>
+                        </td>
+                        <td>
+                            <input class="btn" type="button" value="8" onclick="btneight()" id="btn8">
+            
+                            </input>
+                        </td>
+                        <td>
+                            <input class="btn" type="button" value="9" onclick="btnnine()" id="btn9">
+            
+                            </input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="btn" type="button" value="0" onclick="btnzero()" id="btn0">
+            
+                            </input>
+                        </td>
+                        <td>
+                            <input class="btn" type="button" value="+" onclick="btnAddition()" id="btnPlus">
+            
+                            </input>
+                        </td>
+                        <td>
+                            <input class="btn" type="button" value="-" onclick="btnSubtraction()" id="btnMinus">
+            
+                            </input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="btn" type="button" value="*" onclick="btnMultiply()" id="btnMult">
+            
+                            </input>
+                        </td>
+                        <td>
+                            <input class="btn" type="button" value="/" onclick="btnDivide()" id="btnDiv">
+            
+                            </input>
+                        </td>
+                        <td>
+                            <input class="btn" type="button" value="=" onclick="btnCalculate()" id="btnResult">
+            
+                            </input>
+                        </td>
+                    </tr>
+                </table>
+                <!--<input type="text" id="result">-->
+            </form>
+        </div>
+    </div>
+</body>
+</html>
